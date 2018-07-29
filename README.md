@@ -34,8 +34,7 @@ Currently it is still under development and can not be used for production.
 - [X] Work Schedule Management
 - [X] Attendance Management with * rules *
 - [X] Holidays Management
-- [X] Management and Overtime Calculation in accordance with [applicable regulations] (https://gajimu.com/main/pekerjaan-yanglayak/kompensasi/upah-gembur)
-- [X] BPJS Health Management
+- [X] Company Health Insurance Provider Management(HMO/PPO)
 - [X] Management and Calculation of Employment in accordance with both the State of Arizona [Arizona Industrial Commission - applicable regulations] (https://www.azica.gov/resources/employees) and U.S. Federal Law [Department of Labor] (https://www.tsheets.com/flsa/)
 - [X] Employment tax according to both the the [U.S. Internal Revenue Service (IRS)] (https://apps.irs.gov/app/withholdingcalculator/) and the [Arizona Department of Revenue] (https://azdor.gov/businesses-arizona/withholding-tax)
 - [X] Salary and Credential data ** encrypted ** with RSA algorithm
@@ -89,7 +88,7 @@ To run unit testing, you simply run the `php vendor / bin / phpunit` command
 
 ## Contributor(s):
 
-Thanks to: SemartHris for their work (this project is a fork of theirs). Including: Proyek ini dikembangkan oleh [Muhamad Surya Iksanudin](https://github.com/ad3n) dan para [contributor](https://github.com/KejawenLab/SemartHris/graphs/contributors)
+Thanks to: SemartHris for their work (this project is a fork of theirs). Including the following contributors/authors: Proyek ini dikembangkan oleh [Muhamad Surya Iksanudin](https://github.com/ad3n) dan para [contributor](https://github.com/KejawenLab/SemartHris/graphs/contributors)
 untuk [KejawenLab](https://github.com/KejawenLab).
 
 ## TODO:

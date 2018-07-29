@@ -1,136 +1,139 @@
-# SemartHris
+# Ghetto Geek / 3Comma - HRIS
 
-SemartHris adalah Enterprise Grade Human Resources Information System (HRIS) yang dapat digunakan untuk membantu memudahkan tugas HRD Perusahaan.
+This is an project is being developed wuth the intentions of being an Enterprise Grade - Human Resources Information System (HRIS) that can be used to help ease the HRD task of the Company.
 
-## Tahap Pengembangan
+## Development Stage (Use Cautiously):
 
-SemartHris belum dapat digunakan untuk produksi dan sedang dalam proses pengembangan.
+Currently it is still under development and can not be used for production.
 
-## Minimum Requirement
+## Minimum Requirement(s):
 
-- [X] PHP versi 7.1.7 dan extension yang diperlukan selama instalasi menggunakan composer
-- [X] PostgreSQL Database minimal versi 9.6
-- [X] Web Server (Apache, Nginx atau IIS)
-- [X] APCu extension (untuk Production)
+- [X] PHP version 7.1.7 and extension required during installation using composer. 
+- [X] PostgreSQL Database version 9.6 or higher
+- [X] Web Server (Apache, Nginx or IIS)
+- [X] APCu extension (for Production)
 
-**NOTE**: 
+**NOTE:**
 
-- [X] Sistem ini dikembangkan menggunakan lingkungan pengembangan Linux, pengembang tidak menjamin jika sistem ini dapat berjalan dengan baik pada sistem operasi lain.
-- [X] Walaupun dapat berjalan pada DB Engine lain seperti MySQL, namun sistem ini hanya mensupport untuk database PostgreSQL.
+- [X] The system was developed using the Linux development environment, the developer does not guarantee if the system can run well on other operating systems.
+- [X] Although it can run on other DB Engine like MySQL, but this system only support for PostgreSQL database.
 
-## Fitur
+## Features:
 
-- [X] Manajemen Perusahaan
-- [X] Support Multi Perusahaan
-- [X] Manajemen Jabatan
-- [X] Manajemen Karyawan
-- [X] Support Multi Alamat
-- [X] Support Penempatan Karyawan
-- [X] Manajemen Kontrak Kerja
-- [X] Manajemen Kontrak Perusahaan dengan Rekanan/Klien
-- [X] Karir History
-- [X] Promosi, Mutasi, dan Demosi
-- [X] Manajemen Shift Kerja
-- [X] Manajemen Jadwal Kerja
-- [X] Manajemen Absensi dengan fitur *rules*
-- [X] Manajemen Hari Libur
-- [X] Manajemen dan Perhitungan Lembur sesuai dengan [peraturan yang berlaku](https://gajimu.com/main/pekerjaan-yanglayak/kompensasi/upah-lembur)
-- [X] Manajemen BPJS Kesehatan
-- [X] Manajemen dan Perhitungan BPJS Ketenagakerjaan (JKK, JKM, JHT dan JP) sesuai dengan [peraturan yang berlaku](http://www.pasienbpjs.com/2017/01/cara-menghitung-iuran-bpjs-ketenagakerjaan.html)
-- [X] Pajak PPH21 sesuai [peraturan yang berlaku](https://www.online-pajak.com/id/cara-perhitungan-pph-21)
-- [X] Gaji dan Credential data **dienkripsi** dengan algoritma RSA
-- [X] Laporan Penggajian
-- [X] Laporan Beban Gaji Perusahaan
-- [X] Historikal Data Karyawan (Jenjang Karir, Gaji, Tunjangan, dan Pajak)
-- [X] Backend Site and API sekaligus
-- [X] Soft Delete (data tidak benar-benar dihapus)
+- [X] Company Management 
+- [X] Multi Support Company 
+- [X] Position Management 
+- [X] Employee Management 
+- [X] Support Multi Address
+- [X] Support Employee Placement
+- [X] Contract of Work Management
+- [X] Contract Management Company with Partner / Client
+- [X] Career History
+- [X] Promotion, Mutation, and Demotion
+- [X] Shift Management Work
+- [X] Work Schedule Management
+- [X] Attendance Management with * rules *
+- [X] Holidays Management
+- [X] Management and Overtime Calculation in accordance with [applicable regulations] (https://gajimu.com/main/pekerjaan-yanglayak/kompensasi/upah-gembur)
+- [X] BPJS Health Management
+- [X] Management and Calculation of Employment in accordance with both the State of Arizona [Arizona Industrial Commission - applicable regulations] (https://www.azica.gov/resources/employees) and U.S. Federal Law [Department of Labor] (https://www.tsheets.com/flsa/)
+- [X] Employment tax according to both the the [U.S. Internal Revenue Service (IRS)] (https://apps.irs.gov/app/withholdingcalculator/) and the [Arizona Department of Revenue] (https://azdor.gov/businesses-arizona/withholding-tax)
+- [X] Salary and Credential data ** encrypted ** with RSA algorithm
+- [X] Payroll Report
+- [X] Company Salary Expense Report
+- [X] Historical Employee Data (Career Level, Salary, Allowances, and Taxes)
+- [X] Backend Site and API at once
+- [X] Soft Delete (data not actually deleted)
 - [X] Restore Deleted Record
-- [X] Pelacakan Data (CreatedAt, CreatedBy, UpdatedAt, UpdatedBy, dan DeletedAt)
+- [X] Data Tracking (CreatedAt, CreatedBy, UpdatedAt, UpdatedBy, and DeletedAt)
 
-## Cara Install (Menggunakan Docker)
+## How to Install (Using Docker):
 
-- [X] Clone/Download repository `git clone https://github.com/KejawenLab/SemartHris.git` dan pindah ke folder `SemartHris`
-- [X] Build image dengan [`docker-compose`](https://docs.docker.com/compose) dengan menjalankan `docker-compose build && docker-compose up` 
-- [X] Jalankan perintah `docker exec -it semarthris_db_1 psql -U semarthris`, bila perlu memasukkan password, masukkan `semarthris`
-- [X] Jalankan perintah `CREATE EXTENSION IF NOT EXISTS "uuid-ossp";` untuk mengaktifkan ekstensi UUID.
-- [X] Jalankan perintah `docker-compose exec app bin/console doctrine:schema:update --force` untuk membuat table yang dibutuhkan
-- [X] Jalankan perintah `docker-compose exec app bin/console doctrine:fixtures:load -n` untuk *populate initial* data
-- [X] Buka halaman `<HOST>:8000/` untuk halaman admin
-- [X] Buka halaman `<HOST>:8000/api` untuk halaman API
-- [X] Buka halaman `<HOST>:8080` untuk halaman Adminer
+- [X] Clone / Download the repository `git clone https: // github.com / KejawenLab / SemartHris.git` and move to the` SemartHris` folder
+- [X] Build image with [`docker-compose`] (https://docs.docker.com/compose) by running` docker-compose build && docker-compose up`
+- [] Execute command `docker exec -it 3_comma_hris_db_1 psql -U 3_comma_hris`, if need to enter password, enter` 3commahris`
+- [X] Run the `CREATE EXTENSION IF NOT EXISTS" uuid-ossp ";` command to enable the UUID extension.
+- [X] Run the command `docker-compose exec app bin / console doctrine: schema: update --force` to create the required table
+- [X] Run the command `docker-compose exec app bin / console doctrine: fixtures: load -n` to * populate initial * data
+- [X] Go to page `<HOST>: 8000 /` for User page
+- [X] Go to page `<HOST>: 8000 / api` for API page
+- [X] Go to page `<HOST>: 8080` for Admin page 
 
-## Cara Install (Manual)
 
-- [X] Clone/Download repository `git clone https://github.com/KejawenLab/SemartHris.git` dan pindah ke folder `SemartHris`
-- [X] Jalankan [Composer](https://getcomposer.org/download) Install/Update `composer update --prefer-dist -vvv`
-- [X] Setup koneksi database pada `.env`
-```lang=bash
-    SEMART_DB_DRIVER="pgsql"
-    SEMART_DB_USER="semarthris"
-    SEMART_DB_PASSWORD="semarthris"
-    SEMART_DB_HOST="db"
-    SEMART_DB_PORT="5432"
-    SEMART_DB_NAME="semarthris"
-```
-- [X] Jalankan perintah `php bin/console doctrine:database:drop --force` untuk menghapus database lama (**optional**)
-- [X] Jalankan perintah `php bin/console doctrine:database:create` untuk membuat database
-- [X] Aktifkan ekstensi UUID dengan menjalankan perintah `CREATE EXTENSION IF NOT EXISTS "uuid-ossp";` pada Console DB/PgAdmin
-- [X] Jalankan perintah `php bin/console doctrine:schema:update --force` untuk membuat table yang dibutuhkan
-- [X] Jalankan perintah `php bin/console doctrine:fixtures:load` untuk *populate initial* data
-- [X] Simpan username dan password yang ditampilkan untuk digunakan mengakses aplikasi
-- [X] Jalankan perintah `php bin/console server:run` untuk mengaktifkan web server
-- [X] Buka halaman `<HOST>:<PORT>/` untuk halaman admin
-- [X] Buka halaman `<HOST>:<PORT>/api` untuk halaman API
+## How to Install (Manually):
 
-## Unit Test
+- [X] Clone / Download repository `git clone https: // github.com/3CommaDevs / HumanResourceInfoSystem.git` and move to` HumanResourceInfoSystem` folder
+- [X] Run [Composer] (https://getcomposer.org/download) Install / Update `composer update --prefer-dist -vvv`
+- [X] Setup database connection in `.env`
+`` `lang = bash
+3comma_DB_DRIVER = "pgsql"
+3comma_DB_USER = "3comma_hris"
+3comma_DB_PASSWORD = "3comma_hris"
+3comma_DB_HOST = "db"
+3comma_DB_PORT = "5432"
+3comma_DB_NAME = "3comma_hris"
+`` `
+- [X] Run the command `php bin / console doctrine: database: drop --force` to delete the old database (** optional **)
+- [X] Run the command `php bin / console doctrine: database: create` to create the database
+- [X] Enable UUID extension by running `CREATE EXTENSION IF NOT EXISTS" uuid-ossp ";` command on Console DB / PgAdmin
+- [X] Run the command `php bin / console doctrine: schema: update --force` to create the required table
+- [X] Run the command `php bin / console doctrine: fixtures: load` to * populate initial * data
+- [X] Save the username and password displayed for use to access the application
+- [X] Run the command `php bin / console server: run` to enable the web server
+- [X] Go to page `<HOST>: <PORT> /` for admin page
+- [X] Go to page `<HOST>: <PORT> / api` for API page
+    
+## Unit Test:
 
-Untuk menjalankan unit testing, Anda cukup menjalankan perintah `php vendor/bin/phpunit`
+To run unit testing, you simply run the `php vendor / bin / phpunit` command
 
-## Kontributor
+## Contributor(s):
 
-Proyek ini dikembangkan oleh [Muhamad Surya Iksanudin](https://github.com/ad3n) dan para [kontributor](https://github.com/KejawenLab/SemartHris/graphs/contributors)
+Thanks to: SemartHris for their work (this project is a fork of theirs). Including: Proyek ini dikembangkan oleh [Muhamad Surya Iksanudin](https://github.com/ad3n) dan para [contributor](https://github.com/KejawenLab/SemartHris/graphs/contributors)
 untuk [KejawenLab](https://github.com/KejawenLab).
 
-## TODO
+## TODO:
 
-Untuk apa saja yang sudah dan belum dikerjakan bisa melihat [TODO LIST](TODO.md)
+For anything that has been and has not been done can see [TODO LIST](TODO.md)
 
-## ROADMAP
+## ROADMAP:
 
-Untuk mengetahui roadmap dari aplikasi SemartHRIS bisa melihat [ROADMAP](ROADMAP.md)
+To know the roadmap of 3 Comma HRIS application can see [ROADMAP](ROADMAP.md)
 
-## Lisensi
+## Licensing:
 
-Proyek ini menggunakan lisensi [MIT](https://tldrlegal.com/license/mit-license) &copy; Muhamad Surya Iksanudin.
-Pastikan Anda memahami kewajiban dan hak Anda sebelum Anda memutuskan untuk menggunakan software ini.
+This project uses [MIT] license (https://tldrlegal.com/license/mit-license) & copy; Dashon 'DJ' Hawkins (via Muhamad Surya Iksanudin).
 
-## Donasi
+Make sure you understand your obligations and rights before you decide to use this software.
 
-Untuk mensupport proyek ini, Anda dapat memberikan donasi melalui rekening berikut:
 
-- BCA 607-045-794-4 a/n Muhamad Surya Iksanudin
-- Mandiri 121-00-069-6522-6 a/n Muhamad Surya Iksanudin
+## Donation
+
+To support this project, you can donate via the following: 
+
 
 ## Profesional Support
 
-Bila Anda memerlukan profesional support atau ingin mengadakan kerjasama dengan saya, dapat menghubungi saya melalui:
+If you need professional support or wish to cooperate with me, please contact us via:
 
-- Email: [surya.kejawen@gmail.com](mailto:surya.kejawen@gmail.com)
-- WA: 0878-000-939-15
-- FB: [KejawenLab](https://facebook.com/KejawenLab)
 
-## Keamanan Aplikasi
+- Email: [info@3CommaDevs.com](mailto:info@3CommaDevs.com)
+- Telegram: Dashon Hawkins
+- FB: [3 Comma Devs LLC](https://facebook.com/3CommaDevsLLC)
+- LinkedIn: [3 Comma Devs](htps://linkedin.com/ln/3CommaDevsLLC)
 
-Jika Anda menemukan bug/celah keamaan pada aplikasi ini, Anda dapat mengirimkan email dengan subject: **[SEMARTHRIS][SECURITY] SUBJECT** ke alamat [surya.kejawen@gmail.com](mailto:surya.kejawen@gmail.com)
+## Application Security:
+
+If you find a bug / vulnerability in this application, you can send an email with subject: ** [3Comma HRIS] [SECURITY VUNERALIBILITY - ISSUE/ALERT] SUBJECT ** to [info@3CommaDevs.com] (mailto: info@3CommaDevs.com)
 
 ## Preview
 
-![SemartHris Profil Karyawan Preview](preview/preview.png)
+![3Comma-HRIS Profile User Preview](preview/preview.png)
 
-![SemartHris Laporan Absensi Preview](preview/preview2.png)
+![3Comma-HRIS Attendance Report Preview](preview/preview2.png)
 
-![SemartHris Detail Gaji](preview/penggajian3.png)
+![3Comma-HRIS Detail Salary](preview/penggajian3.png)
 
-![SemartHris API Preview](preview/api-preview.png)
+![3Comma-HRIS API Preview](preview/api-preview.png)
 
-Butuh lebih banyak screenshot? silahkan cek folder [preview](preview)
+Need more screenshots? please check folder [preview](preview)
